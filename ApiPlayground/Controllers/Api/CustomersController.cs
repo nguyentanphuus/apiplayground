@@ -42,7 +42,7 @@ namespace ApiPlayground.Controllers.Api
 		[HttpPost]
 		[ProducesResponseType(StatusCodes.Status200OK)]
 		[ProducesResponseType(StatusCodes.Status400BadRequest)]
-		public async Task<ActionResult<Customer>> PostCustomer(Customer customer)
+		public async Task<ActionResult<Customer>> PostCustomer([FromBody]Customer customer)
 		{
 			if (!ModelState.IsValid)
 			{
