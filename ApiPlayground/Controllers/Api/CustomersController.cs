@@ -26,7 +26,7 @@ namespace ApiPlayground.Controllers.Api
 		[ProducesResponseType(StatusCodes.Status404NotFound)]
 		public ActionResult<Customer> GetCustomer(Guid id)
 		{
-			if (!ModelState.IsValid)
+            if (!ModelState.IsValid)
 			{
 				return BadRequest(ModelState);
 			}
